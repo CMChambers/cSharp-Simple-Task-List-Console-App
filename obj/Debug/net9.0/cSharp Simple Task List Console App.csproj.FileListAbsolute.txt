@@ -1,0 +1,14 @@
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\bin\Debug\net9.0\cSharp Simple Task List Console App.exe
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\bin\Debug\net9.0\cSharp Simple Task List Console App.deps.json
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\bin\Debug\net9.0\cSharp Simple Task List Console App.runtimeconfig.json
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\bin\Debug\net9.0\cSharp Simple Task List Console App.dll
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\bin\Debug\net9.0\cSharp Simple Task List Console App.pdb
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.AssemblyInfoInputs.cache
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.AssemblyInfo.cs
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.csproj.CoreCompileInputs.cache
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.dll
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\refint\cSharp Simple Task List Console App.dll
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.pdb
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.genruntimeconfig.cache
+F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\ref\cSharp Simple Task List Console App.dll
