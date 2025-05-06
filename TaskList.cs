@@ -10,6 +10,7 @@ namespace SimpleTaskList
 
         public void AddTask(string description)
         {
+            nextId = tasks.Count + 1;
             tasks.Add(new TaskItem { Id = nextId++, Description = description });
             SaveToFile();
         }
@@ -42,12 +43,24 @@ namespace SimpleTaskList
             {
                 tasks.Remove(task);
             }
+
+            RenumberTasks();
             SaveToFile();
+        }
+
+        private void RenumberTasks()
+        {
+            int newID = 1;
+            foreach (var t in tasks)
+            {
+                t.Id = newID;
+                newID++;
+            }
         }
 
         private void SaveToFile()
         {
-            using(var writer = new StreamWriter("tasks.txt"))
+            using(var writer = new StreamWriter(filePath))
             {
                 foreach (var task in tasks)
                 {
@@ -58,11 +71,11 @@ namespace SimpleTaskList
 
         public void LoadFromFile()
         {
-            string filepath = "tasks.txt";
+            // string filepath = "tasks.txt";
 
-            if (File.Exists(filepath))
+            if (File.Exists(filePath))
             {
-                foreach (var line in File.ReadAllLines(filepath))
+                foreach (var line in File.ReadAllLines(filePath))
                 {
                     string[] parts = line.Split(',');
                     tasks.Add(new TaskItem
