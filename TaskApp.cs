@@ -10,26 +10,42 @@ namespace SimpleTaskList
         string menuSelection;
         public void Run()
         {
-            taskList = new TaskList();
-            taskList.LoadFromFile();
-            running = true;
-
+            Initialize();
             while (running)
             {
                 WriteMenu();
-                menuSelection = GetInput();
-                ProcessInput(menuSelection);
+                GetMenuSelection();
+                ProcessMenuSelection();
             }
         }
 
-        private string GetInput()
+        private void Initialize()
+        {
+            taskList = new TaskList();
+            taskList.LoadFromFile();
+            running = true;
+        }
+
+        private void WriteMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Simple To-Do List");
+            Console.WriteLine("1. Add Task");
+            Console.WriteLine("2. View Task");
+            Console.WriteLine("3. Complete Task");
+            Console.WriteLine("4. Delete Task");
+            Console.WriteLine("5. Exit");
+            Console.Write("Enter your choice: ");
+        }
+
+        private void GetMenuSelection()
         {
             string input = Console.ReadLine();
             if (input == null) { input = ""; }
-            return input;
+            menuSelection = input;
         }
 
-        private void ProcessInput(string menuSelection)
+        private void ProcessMenuSelection()
         {
             switch (menuSelection)
             {
@@ -60,18 +76,6 @@ namespace SimpleTaskList
                     running = false;
                     break;
             }
-        }
-
-        public static void WriteMenu()
-        {
-            Console.Clear();
-            Console.WriteLine("Simple To-Do List");
-            Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. View Task");
-            Console.WriteLine("3. Complete Task");
-            Console.WriteLine("4. Delete Task");
-            Console.WriteLine("5. Exit");
-            Console.Write("Enter your choice: ");
         }
 
     }
