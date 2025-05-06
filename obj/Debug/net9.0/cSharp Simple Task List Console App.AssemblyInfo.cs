@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cSharp Simple Task List Console App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d84225428a6ab2cd76845cc2fae5eb36783d20ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("cSharp Simple Task List Console App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cSharp Simple Task List Console App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,3 +12,4 @@ F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.
 F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.pdb
 F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.genruntimeconfig.cache
 F:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\ref\cSharp Simple Task List Console App.dll
+f:\Project Programs\_VS Code\cSharp Simple Task List Console App\obj\Debug\net9.0\cSharp Simple Task List Console App.sourcelink.json
