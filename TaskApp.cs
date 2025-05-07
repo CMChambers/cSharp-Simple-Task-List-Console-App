@@ -31,7 +31,7 @@ namespace SimpleTaskList
             Exit,
             ViewTasks,
             AddTask,
-            EditTask
+            EditTask,
             CompleteTask,
             DeleteTask,
             ClearTasks,
@@ -61,27 +61,27 @@ namespace SimpleTaskList
 
         private void ProcessMenuSelection()
         {
-            switch (menuSelection)
+            switch ((MenuOption)int.Parse(menuSelection))
             {
-                case "0":
+                case MenuOption.Exit:
                     exit();
                     break;
-                case "1":
+                case MenuOption.AddTask:
                     addTask();
                     break;
-                case "2":
+                case MenuOption.ViewTasks:
                     viewTask();
                     break;
-                case "3":
+                case MenuOption.CompleteTask:
                     completeTask();
                     break;
-                case "4":
+                case MenuOption.DeleteTask:
                     deleteTask();
                     break;
-                case "5":
+                case MenuOption.ClearTasks:
                     clearTaskList();
                     break;
-                case "6":
+                case MenuOption.EditTask:
                     editTask();
                     break;
                 default:
