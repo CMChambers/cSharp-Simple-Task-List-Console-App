@@ -26,19 +26,30 @@ namespace SimpleTaskList
             running = true;
         }
 
+        enum MenuOption
+        {
+            Exit,
+            ViewTasks,
+            AddTask,
+            EditTask
+            CompleteTask,
+            DeleteTask,
+            ClearTasks,
+        }
         private void WriteMenu()
         {
-            int currentMenuNumber = 0;
+            WriteMenuHeader();
+            for (int currentMenuNumber = 0; currentMenuNumber < Enum.GetNames(typeof(MenuOption)).Length; currentMenuNumber++)
+            {
+                Console.WriteLine($"{currentMenuNumber}. {(MenuOption)currentMenuNumber}");
+            }
+            Console.Write("Enter your choice: ");
+        }
+
+        private void WriteMenuHeader()
+        {
             Console.Clear();
             Console.WriteLine("Simple To-Do List");
-            Console.WriteLine($"{currentMenuNumber++}. Exit");
-            Console.WriteLine($"{currentMenuNumber++}. Add Task");
-            Console.WriteLine($"{currentMenuNumber++}. View Task");
-            Console.WriteLine($"{currentMenuNumber++}. Complete Task");
-            Console.WriteLine($"{currentMenuNumber++}. Delete Task");
-            Console.WriteLine($"{currentMenuNumber++}. Clear Tasks");
-            Console.WriteLine($"{currentMenuNumber++}. Edit Task");
-            Console.Write("Enter your choice: ");
         }
 
         private void GetMenuSelection()
