@@ -51,50 +51,68 @@ namespace SimpleTaskList
         {
             switch (menuSelection)
             {
-                case "0":
-                    running = false;
-                    break;
-                case "1":
-                    Console.Write("Enter task description: ");
-                    string description = Console.ReadLine();
-                    taskList.AddTask(description);
-                    break;
-                case "2":
-                    taskList.ViewTask();
-                    Console.ReadKey();
-                    break;
-                case "3":
-                    Console.Write("Enter task ID to complete: ");
-                    if (int.TryParse(Console.ReadLine(), out int completeId))
-                    {
-                        taskList.CompleteTask(completeId);
-                    }
-                    break;
-                case "4":
-                    Console.Write("Enter task ID to delete: ");
-                    if (int.TryParse(Console.ReadLine(), out int deleteId))
-                    {
-                        taskList.DeleteTask(deleteId);
-                    }
-                    break;
-                case "5":
-                    taskList.ClearTasks();
-                    break;
-                case "6":
-                    Console.Write("Enter task ID to edit: ");
-                    if (int.TryParse(Console.ReadLine(), out int taskId))
-                    {
-                        taskList.WriteTaskIDandDescription(taskId);
-                        Console.Write("Enter new description: ");
-                        string newDescription = Console.ReadLine();
-                        taskList.EditTask(taskId, newDescription);
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Invalid selection.");
-                    break;
+                case "0":exit();break;
+                case "1":addTask();break;
+                case "2":viewTask();break;
+                case "3":completeTask();break;
+                case "4":deleteTask();break;
+                case "5":clearTaskList();break;
+                case "6":editTask();break;
+                default:Console.WriteLine("Invalid selection.");break;
             }
         }
 
+        private void editTask()
+        {
+            Console.Write("Enter task ID to edit: ");
+            if (int.TryParse(Console.ReadLine(), out int taskId))
+            {
+                taskList.WriteTaskIDandDescription(taskId);
+                Console.Write("Enter new description: ");
+                string newDescription = Console.ReadLine();
+                taskList.EditTask(taskId, newDescription);
+            }
+        }
+
+        private void clearTaskList()
+        {
+            taskList.ClearTasks();
+        }
+
+        private void deleteTask()
+        {
+            Console.Write("Enter task ID to delete: ");
+            if (int.TryParse(Console.ReadLine(), out int deleteId))
+            {
+                taskList.DeleteTask(deleteId);
+            }
+        }
+
+        private void completeTask()
+        {
+            Console.Write("Enter task ID to complete: ");
+            if (int.TryParse(Console.ReadLine(), out int completeId))
+            {
+                taskList.CompleteTask(completeId);
+            }
+        }
+
+        private void viewTask()
+        {
+            taskList.ViewTask();
+            Console.ReadKey();
+        }
+
+        private void addTask()
+        {
+            Console.Write("Enter task description: ");
+            string description = Console.ReadLine();
+            taskList.AddTask(description);
+        }
+
+        private void exit()
+        {
+            running = false;
+        }
     }
 }
