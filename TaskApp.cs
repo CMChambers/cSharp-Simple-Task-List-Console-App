@@ -28,15 +28,16 @@ namespace SimpleTaskList
 
         private void WriteMenu()
         {
+            int currentMenuNumber = 0;
             Console.Clear();
             Console.WriteLine("Simple To-Do List");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. View Task");
-            Console.WriteLine("3. Complete Task");
-            Console.WriteLine("4. Delete Task");
-            Console.WriteLine("5. Clear Tasks");
-            Console.WriteLine("6. Edit Task");
+            Console.WriteLine($"{currentMenuNumber++}. Exit");
+            Console.WriteLine($"{currentMenuNumber++}. Add Task");
+            Console.WriteLine($"{currentMenuNumber++}. View Task");
+            Console.WriteLine($"{currentMenuNumber++}. Complete Task");
+            Console.WriteLine($"{currentMenuNumber++}. Delete Task");
+            Console.WriteLine($"{currentMenuNumber++}. Clear Tasks");
+            Console.WriteLine($"{currentMenuNumber++}. Edit Task");
             Console.Write("Enter your choice: ");
         }
 
@@ -51,14 +52,30 @@ namespace SimpleTaskList
         {
             switch (menuSelection)
             {
-                case "0":exit();break;
-                case "1":addTask();break;
-                case "2":viewTask();break;
-                case "3":completeTask();break;
-                case "4":deleteTask();break;
-                case "5":clearTaskList();break;
-                case "6":editTask();break;
-                default:Console.WriteLine("Invalid selection.");break;
+                case "0":
+                    exit();
+                    break;
+                case "1":
+                    addTask();
+                    break;
+                case "2":
+                    viewTask();
+                    break;
+                case "3":
+                    completeTask();
+                    break;
+                case "4":
+                    deleteTask();
+                    break;
+                case "5":
+                    clearTaskList();
+                    break;
+                case "6":
+                    editTask();
+                    break;
+                default:
+                    Console.WriteLine("Invalid selection.");
+                    break;
             }
         }
 
