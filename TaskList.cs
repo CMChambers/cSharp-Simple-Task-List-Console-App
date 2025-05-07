@@ -103,5 +103,35 @@ namespace SimpleTaskList
                 // }
             }
         }
+
+        public void ClearTasks()
+        {
+            tasks.Clear();
+            SaveToFile();
+        }
+
+        public void EditTask(int taskId, string newDescription)
+        {
+            // WriteTaskIDandDescription(taskId);
+            var task = tasks.Find(t => t.Id == taskId);
+            if (task != null)
+            {
+                task.Description = newDescription;
+            }
+            else
+            {
+                Console.WriteLine($"Task with ID {taskId} not found.");
+            }
+            SaveToFile();
+        }
+
+        public void WriteTaskIDandDescription(int taskId)
+        {
+            var task = tasks.Find(t => t.Id == taskId);
+            if (task != null)
+            {
+                Console.WriteLine($"{task.Id}: {task.Description}");
+            }
+        }
     }
 }

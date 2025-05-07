@@ -30,11 +30,13 @@ namespace SimpleTaskList
         {
             Console.Clear();
             Console.WriteLine("Simple To-Do List");
+            Console.WriteLine("0. Exit");
             Console.WriteLine("1. Add Task");
             Console.WriteLine("2. View Task");
             Console.WriteLine("3. Complete Task");
             Console.WriteLine("4. Delete Task");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Clear Tasks");
+            Console.WriteLine("6. Edit Task");
             Console.Write("Enter your choice: ");
         }
 
@@ -49,6 +51,9 @@ namespace SimpleTaskList
         {
             switch (menuSelection)
             {
+                case "0":
+                    running = false;
+                    break;
                 case "1":
                     Console.Write("Enter task description: ");
                     string description = Console.ReadLine();
@@ -73,7 +78,20 @@ namespace SimpleTaskList
                     }
                     break;
                 case "5":
-                    running = false;
+                    taskList.ClearTasks();
+                    break;
+                case "6":
+                    Console.Write("Enter task ID to edit: ");
+                    if (int.TryParse(Console.ReadLine(), out int taskId))
+                    {
+                        taskList.WriteTaskIDandDescription(taskId);
+                        Console.Write("Enter new description: ");
+                        string newDescription = Console.ReadLine();
+                        taskList.EditTask(taskId, newDescription);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid selection.");
                     break;
             }
         }
